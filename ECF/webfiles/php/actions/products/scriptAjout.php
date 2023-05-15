@@ -1,7 +1,12 @@
 <?php 
+ 
+   $database = new PDO(
+       'mysql:host=localhost;dbname=leboncote;charset=utf8','root',''    
+   );
    
+
  // FAIRE UN REQUIRE ONCE DU DBCONNECT 
-    if(!empty($conn)){
+    if(!empty($database)){
 
         $nom = $_POST["descriptions"];
         $image = $_POST["img"];
@@ -10,7 +15,7 @@
 
         $req = "INSERT INTO vente (descriptions, img, prix, article) VALUES ('$nom', '$image', '$prix', '$article')";
 
-        $exec = $conn->query($req);
+        $exec = $database->query($req);
 
         if($exec != false){
             echo "l'ajout de l'article a fonctionné";
