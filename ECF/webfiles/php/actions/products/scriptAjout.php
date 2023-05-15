@@ -1,9 +1,6 @@
 <?php 
  
-   $database = new PDO(
-       'mysql:host=localhost;dbname=leboncote;charset=utf8','root',''    
-   );
-   
+   require_once('./webfiles/php/actions/dbconnect.php');
 
  // FAIRE UN REQUIRE ONCE DU DBCONNECT 
     if(!empty($database)){
