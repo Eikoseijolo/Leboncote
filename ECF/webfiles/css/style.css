@@ -72,14 +72,14 @@ main .container{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    border-top: solid 1px #D5DBDB;
-    border-left: solid 1px #D5DBDB;
+    border-top: solid 3px #cf7c07;
+    border-left: solid 3px #c6850b;
 }
 
 main .card{
     padding: 1.5rem;
-    border-right: solid 1px #D5DBDB;
-    border-bottom: solid 1px #D5DBDB;
+    border-right: solid 3px #c6850b;
+    border-bottom: solid 3px #c6850b;
 }
 
 main .card img{

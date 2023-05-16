@@ -22,7 +22,7 @@ if (!empty($database)) {
     if ($exec != false) {
         echo "ok";
         // Retour a l'index.php :
-        header("Location: ./../../../index.php");
+        header("Location: ./../../../../index.php");
         // Sinon message d'erreur :
     } else {
         echo "erreur";
