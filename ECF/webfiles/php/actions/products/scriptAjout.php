@@ -1,6 +1,6 @@
 <?php 
  
-   require_once('./webfiles/php/actions/dbconnect.php');
+   require_once('../dbconnect.php');
 
  // FAIRE UN REQUIRE ONCE DU DBCONNECT 
     if(!empty($database)){
@@ -22,4 +22,5 @@
         }
     }
     
+    header("Location: ../../../../index.php")
 ?>
