@@ -24,9 +24,9 @@
             <nav>
                 <p>Leboncote</p>
                 <ul>
-                    <li><a href="./webfiles/php/views/products/ajout.php">Ajouter</a></li>
-                    <li><a href="./webfiles/php/views/products/formUpdate.php">Modifier</a></li>
-                    <li><a href="#">Suprimer</a></li>
+                    <li><a href="./webfiles/php/views/users/contact.php">Nous contacter</a></li>
+                    <li><a href="#">Connexion</a></li>
+                    <li><a href="#">Inscription</a></li>
                 </ul>
             </nav>
         </header>

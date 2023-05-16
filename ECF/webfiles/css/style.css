@@ -1,3 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  }
+header{
+  width: 100%;
+  background: #ce7d0b;
+  }
+  header nav {
+  display: flex;
+  max-width: 1920px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid .1875rem orange;
+  }
+  header nav p{
+    padding-left: 1rem;
+  }
+  header nav ul{
+  display: flex;
+  list-style: none;
+  }
+  header nav a{
+  color: #FFFFFF;
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+  }
+  header nav ul li:hover{
+  text-decoration: underline;
+  color: aliceblue;
+  }
+main h1{
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+  
 .cardf {
   margin: auto;
   width: 350px;
