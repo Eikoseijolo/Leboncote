@@ -16,6 +16,7 @@ if (!empty($database)) {
 
     if ($exec != false) {
         echo "l'ajout de l'article a fonctionné";
+        header("Location: ./../../../../index.php");
     } else {
         echo "l'ajout de votre article n'a pas fonctionné";
     }
