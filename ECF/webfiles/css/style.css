@@ -98,7 +98,7 @@ main h1{
 }
 
 .btn:hover {
-  background-color: #ccc;
+  background-color: #f88740;
   color: #333;
 }
 .cardf h1{
@@ -164,7 +164,7 @@ button {
     height: 24px;
     background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
     border-radius: 30px;
-    border: 1px solid #8F9092;
+    border: 1px solid #b95000;
     transition: all 0.2s ease;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 14px;
@@ -174,11 +174,11 @@ button {
   }
   
   button:hover {
-    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+    box-shadow: 0 4px 3px 1px #dd9c04, 0 6px 8px #db6301, 0 -4px 4px #e19b03, 0 -6px 4px #dc9700, inset 0 0 3px 3px #dc8100;
   }
   
   button:active {
-    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+    box-shadow: 0 4px 3px 1px #e49706, 0 6px 8px #b68003, 0 -4px 4px #e4b304, 0 -6px 4px #f49d06, inset 0 0 5px 3px #c07300, inset 0 0 30px #a86d00;
   }
   
   button:focus {
