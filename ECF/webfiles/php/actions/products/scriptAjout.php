@@ -1,26 +1,25 @@
-<?php
-$database = new PDO(
-    'mysql:host=localhost;dbname=leboncote;charset=utf8',
-    'root',
-    ''
-);
-// FAIRE UN REQUIRE ONCE DU DBCONNECT 
-if (!empty($database)) {
+<?php 
+ 
+   require_once('./webfiles/php/actions/dbconnect.php');
 
-    $nom = $_POST["descriptions"];
-    $image = $_POST["img"];
-    $prix = $_POST["prix"];
-    $article = $_POST["article"];
+ // FAIRE UN REQUIRE ONCE DU DBCONNECT 
+    if(!empty($database)){
 
-    $req = "INSERT INTO vente (descriptions, img, prix, article) VALUES ('$nom', '$image', '$prix', '$article')";
+        $nom = $_POST["descriptions"];
+        $image = $_POST["img"];
+        $prix = $_POST["prix"];
+        $article = $_POST["article"];
 
-    $exec = $database->query($req);
+        $req = "INSERT INTO vente (descriptions, img, prix, article) VALUES ('$nom', '$image', '$prix', '$article')";
 
-    if ($exec != false) {
-        echo "l'ajout de l'article a fonctionné";
-    } else {
-        echo "l'ajout de votre article n'a pas fonctionné";
+        $exec = $database->query($req);
+
+        if($exec != false){
+            echo "l'ajout de l'article a fonctionné";
+        }
+        else{
+            echo "l'ajout de votre article n'a pas fonctionné";
+        }
     }
-}
-
+    
 ?>
