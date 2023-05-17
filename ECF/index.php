@@ -18,8 +18,29 @@
         ''
     );
     // FAIRE UN REQUIRE ONCE DU DBCONNECT 
-    if (!empty($database))
-    ?>
+    if (!empty($database)){
+        setcookie('user_id',"Le coockie", time()+5);
+
+    }
+
+ 
+
+        if(!empty($database)){
+            echo "Connexion BDD réussie";
+        }
+         
+?>
+<?php
+            if(isset($_COOKIE['user_id'])){
+                echo 'Votre ID de session est: ' .$_COOKIE['user_id'];
+            }
+            else{
+                echo "Votre ID n'est pas correctement défini";
+            }
+        ?>
+
+
+
     <header>
         <nav>
             <p>Leboncote</p>
