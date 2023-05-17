@@ -21,11 +21,7 @@
                 <input class="input" name="user_nom" type="text" placeholder="Votre nom" id="Votre Nom">
             </div>
             <div class="form-group">
-                <label for="Votre Prenom">Prenom</label>
-                <input class="input" name="user_prenom" type="text" placeholder="Votre prenom" id="Votre Prenom">
-            </div>
-            <div class="form-group">
-                <label for="Mot de pass">Mot de pass</label>
+                <label for="Mot de pass">Mot de passe</label>
                 <input class="input" name="user_password" type="password" placeholder="Votre Password" id="Mot de pass">
             </div>
             <button class="button">S'enregistrer</button>

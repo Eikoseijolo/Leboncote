@@ -1,8 +1,8 @@
 <?php
-
+// Connexion à la BDD
 require_once('./../dbconnect.php');
 
-// FAIRE UN REQUIRE ONCE DU DBCONNECT 
+// Requête script ajout
 if (!empty($database)) {
 
     $nom = $_POST["descriptions"];

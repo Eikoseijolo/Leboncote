@@ -7,7 +7,6 @@ $database = new PDO(
 if (!empty($database)) {
 
     $user_nom = $_POST["user_nom"];
-    $user_prenom = $_POST["user_prenom"];
     $user_password = $_POST["user_password"];
 
     $req = "SELECT * FROM user WHERE user_nom ='$user_nom' AND user_password ='$user_password'";
@@ -22,7 +21,7 @@ if (!empty($database)) {
         session_start();
         $_SESSION['connected'] = TRUE;
     } else {
-        echo "Mot de pass, nom ou prenom incorrect";
+        echo "Mot de passe, nom ou prenom incorrect";
     }
 } else {
 }
