@@ -19,7 +19,7 @@
     );
     // FAIRE UN REQUIRE ONCE DU DBCONNECT 
     if (!empty($database)){
-        setcookie('user_id',"Le coockie", time()+5);
+        setcookie('user_nom',"warren", time()+500);
 
     }
 
@@ -31,8 +31,8 @@
          
 ?>
 <?php
-            if(isset($_COOKIE['user_id'])){
-                echo 'Votre ID de session est: ' .$_COOKIE['user_id'];
+            if(isset($_COOKIE['user_nom'])){
+                echo 'Votre ID de session est: ' .$_COOKIE['user_nom'];
             }
             else{
                 echo "Votre ID n'est pas correctement défini";

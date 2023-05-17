@@ -1,4 +1,4 @@
 <?php
-setcookie('rgpd', "accepted", time ()+2592000, "/");
-header("");
+setcookie('rgpd', "connected", time ()+2590, "/");
+header("./webfiles/index.php");
 ?>

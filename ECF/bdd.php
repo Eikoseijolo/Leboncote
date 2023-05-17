@@ -5,24 +5,6 @@ require_once('./webfiles/php/actions/dbconnect.php')
 
 // $reqCreate = $database 'leboncote'
 
-// Création d'une table si celle-ci n'existe pas
-CREATE TABLE IF NOT EXISTS `admin` (
-  `admin_id` int NOT NULL,
-  `admin_nom` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `admin_password` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  PRIMARY KEY (`admin_id`) USING BTREE
-) 
-
-
-// Suppression & Ajout de valeurs dans la table Admin
-DELETE FROM `admin`;
-INSERT INTO `admin` (`admin_id`, `admin_nom`,`admin_password`) VALUES
-	(1, 'warren','1234'),
-	(2, 'william','1234'),
-	(3, 'vincent','1234');
-
-
-
 
 // Création d'une table si celle-ci n'existe pas    
 CREATE TABLE IF NOT EXISTS `user` (

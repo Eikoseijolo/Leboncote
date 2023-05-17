@@ -4,25 +4,33 @@ $database = new PDO(
     'root',
     ''
 );
-if (!empty($database)) {
+if (!empty($database)){ 
 
     $user_nom = $_POST["user_nom"];
     $user_password = $_POST["user_password"];
 
     $req = "SELECT * FROM user WHERE user_nom ='$user_nom' AND user_password ='$user_password'";
 
-    $exec = $database->query($req);
-
+    $exec = $database->query($req); 
     $select = $exec->fetch(PDO::FETCH_ASSOC);
 
-    if ($select != false) {
-        echo "Vous etes connecter";
-        header("Location: ./../../../../index.php");
+
+
+    if ($select != false){
+
         session_start();
         $_SESSION['connected'] = TRUE;
-    } else {
-        echo "Mot de passe, nom ou prenom incorrect";
+
+        header("Location: ./../../../../index.php");
+
     }
-} else {
-}
+        else{
+            echo "Nom ou mot de passe incorrecte, vous n'avez pas accès!";
+        }}
+        
+     else{
+
+    }
+
+
 ?>
