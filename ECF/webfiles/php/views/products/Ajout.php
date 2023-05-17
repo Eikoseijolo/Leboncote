@@ -18,9 +18,6 @@ require_once('../../actions/dbconnect.php')
 </head>
 <body>
     
-</body>
-</html>
-
     <div class="cardf">
     <div class="card-header">  
             <h1>Formulaire d'ajout de produits</h1>
