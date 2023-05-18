@@ -15,13 +15,15 @@
         <h1>Connexion</h1>
     </div>
     <div class="card-body">
+        <!-- formulaire de connexion transmise au fichier scriptConnexion.php par methode POST -->
         <form action="./../../actions/users/scriptConnexion.php" method="POST">
             <div class="form-group">
                 <label for="Nom">Nom</label>
                 <input class="input" name="user_nom" type="text" placeholder="Votre nom" id="Nom">
             </div>
+
             <div class="form-group">
-                <label for="Mot de pass">Mot de passe</label>
+                <label for="Mot de pass">Mot de pass</label>
                 <input class="input" name="user_password" type="password" placeholder="Votre Password" id="Mot de pass">
             </div>
             <button class="button">Se connecter</button>
