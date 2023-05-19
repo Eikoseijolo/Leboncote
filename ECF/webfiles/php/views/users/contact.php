@@ -12,10 +12,10 @@
         <nav>
             <p>Leboncote</p>
             <ul>
-                <li><a href="./webfiles/php/views/users/contact.php">Nous contacter</a></li>
-                <li><a href="./webfiles/php/views/users/formConnexion.php">Connexion</a></li>
-                <li><a href="./webfiles/php/actions/users/scriptDeconnexion.php">Déconnexion</a></li>
-                <li><a href="./webfiles/php/views/users/formInscription.php">Inscription</a></li>
+                <li><a href="../../../../index.php">Accueil</a></li>
+                <li><a href="./formConnexion.php">Connexion</a></li>
+                <li><a href="../../actions/users/scriptDeconnexion.php">Déconnexion</a></li>
+                <li><a href="./formInscription.php">Inscription</a></li>
             </ul>
         </nav>
     </header>

@@ -21,7 +21,6 @@
     );
   
     if (!empty($database)) {
-<<<<<<< HEAD
         setcookie('user_id', "Le cookie", time() + 5000);
     }
 
@@ -30,15 +29,6 @@
       else{
 
        "Connexion BDD non réussie";
-=======
-        setcookie('user_id', "Le coockie", time() + 5);
-    }
-
-    // Vérification de la connexion à la base de données
-    if (!empty($database)) {
-        // Si la connexion est réussie, afficher:
-        echo "Connexion BDD réussie";
->>>>>>> 941b021bcfef6dfc99b9af9fa55696e98af89f3a
     }
 
     ?>
@@ -48,10 +38,6 @@
         echo "Votre ID n'est pas correctement défini";
     }
     ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> 941b021bcfef6dfc99b9af9fa55696e98af89f3a
     <header>
         <nav>
             <p>Leboncote</p>
