@@ -14,6 +14,7 @@
 
 
     <?php
+    // Connexion à la base de données
     $database = new PDO(
         'mysql:host=localhost;dbname=leboncote;charset=utf8',
         'root',
@@ -22,12 +23,11 @@
     // FAIRE UN REQUIRE ONCE DU DBCONNECT 
     if (!empty($database)) {
         setcookie('user_id', "Le coockie", time() + 5);
-
     }
 
-
-
+    // Vérification de la connexion à la base de données
     if (!empty($database)) {
+        // Si la connexion est réussie, afficher:
         echo "Connexion BDD réussie";
     }
 
@@ -39,9 +39,6 @@
         echo "Votre ID n'est pas correctement défini";
     }
     ?>
-
-
-
     <header>
         <nav>
             <p>Leboncote</p>
@@ -55,20 +52,26 @@
     </header>
     <main>
         <h1>Nos ventes</h1>
-        <?php if (!empty($_SESSION) && $_SESSION['connected'] === TRUE) { ?>
-            <form action="./webfiles/php/views/products/Ajout.php" method="POST">
-                <button type="submit">Ajouter un produit</button>
-            </form>
-            <?php
-        }
+        <?php
+        //La commande suivante mise en commentaire devait servir a cacher le button "Ajouter un produit".
+        //ayant rencontrer des probleme avec le coockie de session, ce dernier ne fonctionne pas
+        //if (!empty($_SESSION) && $_SESSION['connected'] === TRUE) { ?>
+        <form action="./webfiles/php/views/products/Ajout.php" method="POST">
+            <button type="submit">Ajouter un produit</button>
+        </form>
+        <?php
+        //}
         ?>
         <div class="container">
             <?php
+            // Récupération des données de vente depuis la base de données
+            // La requête SQL suivante récupère toutes les entrées de la table "vente"
             $exec = $database->query("SELECT * FROM vente");
             if ($exec != false):
-
+                // Récupération des résultats de la requête sous forme de tableau associatif
                 $res = $exec->fetchAll(PDO::FETCH_ASSOC);
-
+                // Parcours des résultats et affichage avec $tuple sous forme de boucle
+                // Afin d'eviter la redondance.
                 foreach ($res as $tuple):
                     ?>
                     <div class="card">
@@ -94,18 +97,19 @@
                             <?= $tuple["descriptions"]; ?>
                         </p>
                     </div>
-                <?php endforeach; ?>
+                <?php endforeach;
+                //Si la requete d'ajout ne fonctionne pas on affiche :
+                ?>
 
             <?php else: ?>
                 <p>Requete SQL non valide.</p>
             <?php endif; ?>
-
         </div>
     </main>
     <?php
 
     require_once('../ECF/webfiles/php/views/footer.php')
-    ?>
+        ?>
 
 </body>
 
