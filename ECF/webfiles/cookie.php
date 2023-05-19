@@ -1,4 +1,5 @@
 <?php
 setcookie('rgpd', "connected", time ()+2590, "/");
-header("./webfiles/index.php");
+
+header("Location: ./../index.php");
 ?>

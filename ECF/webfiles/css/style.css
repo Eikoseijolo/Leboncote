@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   }
+
 header{
   width: 100%;
   background: #ce7d0b;
@@ -146,10 +147,10 @@ footer{
     margin-top: 4rem;
     color: white;
     font-family: sans-serif;
-    background-color: #232f3e;
+    background-color: #b95000;
     padding: 1.5rem 0;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 button {

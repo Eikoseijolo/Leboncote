@@ -101,6 +101,11 @@
 
         </div>
     </main>
+    <?php
+
+    require_once('../ECF/webfiles/php/views/footer.php')
+    ?>
+
 </body>
 
 </html>
