@@ -1,5 +1,5 @@
 <?php
-setcookie('CGU', "connected", time ()+3390, "/");
+setcookie('CGU', "connected", time() + 3390, "/");
 
-header("Location: ./../../index.php");
+header("Location: ./../../ECF/index.php");
 ?>

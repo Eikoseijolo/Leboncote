@@ -20,16 +20,15 @@
         'root',
         ''
     );
-  
+
     if (!empty($database)) {
         setcookie('user_id', "Le cookie", time() + 5000);
     }
 
     if (!empty($database)) {
-     }
-      else{
+    } else {
 
-       "Connexion BDD non réussie";
+        "Connexion BDD non réussie";
     }
 
     ?>
@@ -70,31 +69,31 @@
             if ($exec != false):
                 // Récupération des résultats de la requête sous forme de tableau associatif
                 $res = $exec->fetchAll(PDO::FETCH_ASSOC);
-                // Parcours des résultats et affichage avec $tuple sous forme de boucle
+                // Parcours des résultats et affichage avec $data sous forme de boucle
                 // Afin d'eviter la redondance.
-                foreach ($res as $tuple):
+                foreach ($res as $data):
                     ?>
                     <div class="card">
 
                         <form action="./webfiles/php/actions/products/scriptDelete.php" method="POST">
-                            <input type="hidden" name="id" value="<?php echo $tuple["id_article"]; ?>">
+                            <input type="hidden" name="id" value="<?php echo $data["id_article"]; ?>">
                             <button type="submit">Supprimer l'article</button>
                         </form>
                         <form action="./webfiles/php/views/products/formUpdate.php" method="POST">
-                            <input type="hidden" name="id" value="<?php echo $tuple["id_article"]; ?>">
+                            <input type="hidden" name="id" value="<?php echo $data["id_article"]; ?>">
                             <div><button type="submit">Modifier l'article</button></div>
                         </form>
 
 
-                        <img src="<?= $tuple["img"]; ?>" alt="illustration de <?= $tuple["descriptions"]; ?>">
+                        <img src="<?= $data["img"]; ?>" alt="illustration de <?= $data["descriptions"]; ?>">
 
-                        <input type="hidden" name="id" value="<?php echo $tuple["prix"]; ?>">
+                        <input type="hidden" name="id" value="<?php echo $data["prix"]; ?>">
                         <div><button class="info" type="submit">
-                                <?php echo $tuple["prix"]; ?>€&nbsp;-&nbsp; Acheter
+                                <?php echo $data["prix"]; ?>€&nbsp;-&nbsp; Acheter
                             </button></div>
 
                         <p class="product">
-                            <?= $tuple["descriptions"]; ?>
+                            <?= $data["descriptions"]; ?>
                         </p>
                     </div>
                 <?php endforeach;
