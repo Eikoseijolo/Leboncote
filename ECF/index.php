@@ -8,6 +8,7 @@
     <meta name="description" content="ECF, creation d'un site web pour vendre des objets">
     <link rel="stylesheet" href="./webfiles/css/style.css">
     <title>Leboncote vente item</title>
+    <link rel="shortcut icon" href="SRC/img/logo.png" type="image/x-icon">
 </head>
 
 <body>
