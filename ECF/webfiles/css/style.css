@@ -37,6 +37,22 @@ main h1{
   justify-content: center;
   padding: 2rem;
 }
+.contactH1{
+  padding-top: 117px;
+  text-align: center;
+}
+
+.contact {
+  text-align: justify;
+    padding-bottom: 30px;
+    padding-top: 50px;
+
+}
+
+.contact2{
+  text-align: justify;
+  padding-bottom: 50px;
+}
   
 .cardf {
   margin: auto;

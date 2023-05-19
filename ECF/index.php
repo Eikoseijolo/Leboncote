@@ -12,35 +12,31 @@
 
 <body>
 
-
     <?php
     $database = new PDO(
         'mysql:host=localhost;dbname=leboncote;charset=utf8',
         'root',
         ''
     );
-    // FAIRE UN REQUIRE ONCE DU DBCONNECT 
+  
     if (!empty($database)) {
-        setcookie('user_id', "Le coockie", time() + 5);
-
+        setcookie('user_id', "Le cookie", time() + 5000);
     }
 
-
-
     if (!empty($database)) {
-        echo "Connexion BDD réussie";
+     }
+      else{
+
+       "Connexion BDD non réussie";
     }
 
     ?>
     <?php
     if (isset($_COOKIE['user_id'])) {
-        echo 'Votre ID de session est: ' . $_COOKIE['user_id'];
     } else {
         echo "Votre ID n'est pas correctement défini";
     }
     ?>
-
-
 
     <header>
         <nav>
@@ -48,7 +44,7 @@
             <ul>
                 <li><a href="./webfiles/php/views/users/contact.php">Nous contacter</a></li>
                 <li><a href="./webfiles/php/views/users/formConnexion.php">Connexion</a></li>
-                <li><a href="./webfiles/php/actions/users/scriptDeconnexion.php">Deconnexion</a></li>
+                <li><a href="./webfiles/php/actions/users/scriptDeconnexion.php">Déconnexion</a></li>
                 <li><a href="./webfiles/php/views/users/formInscription.php">Inscription</a></li>
             </ul>
         </nav>
@@ -75,7 +71,7 @@
 
                         <form action="./webfiles/php/actions/products/scriptDelete.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $tuple["id_article"]; ?>">
-                            <button type="submit">Suprimer l'article</button>
+                            <button type="submit">Supprimer l'article</button>
                         </form>
                         <form action="./webfiles/php/views/products/formUpdate.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $tuple["id_article"]; ?>">
@@ -97,7 +93,7 @@
                 <?php endforeach; ?>
 
             <?php else: ?>
-                <p>Requete SQL non valide.</p>
+                <p>Requête SQL non valide.</p>
             <?php endif; ?>
 
         </div>

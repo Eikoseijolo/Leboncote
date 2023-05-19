@@ -1,24 +1,31 @@
 <?php
-// Connection a la base de donnée:
+
+//on démarre la session 
+session_start();
+//la variable $_SESSION['connected'] est définie sur TRUE pour enregister
+// l'utilisateur est connecté.
+$_SESSION['connected'] = TRUE;
+
+// Connexion à la base de données:
 $database = new PDO(
     'mysql:host=localhost;dbname=leboncote;charset=utf8',
     'root',
     ''
 );
-// si connection a la base de donnée:
+// si connexion à la base de données:
 if (!empty($database)) {
-    // Alors on execute la suite:
-    // Creation des variables en recuperant les infos transmises avec la methode POST:
+    // Alors on exécute la suite:
+    // Création des variables en récupérant les infos transmises avec la méthode POST:
     $id = $_POST["id"];
     $nom = $_POST["article"];
     $img = $_POST["img"];
     $prix = $_POST["prix"];
     $desc = $_POST["descriptions"];
-    // creation variable pour la requete de mise a jour l'enssemble des tuples:
+    // création variable pour la requête de mise à jour l'ensemble des tuples:
     $req = "UPDATE vente SET article = '$nom', img = '$img', prix = '$prix', descriptions = '$desc'  WHERE id_article = '$id'";
-    // creation de la variable pour executer:
+    // création de la variable pour exécuter:
     $exec = $database->query($req);
-    // Si l'execution est different de false alors ca a bien été executé:
+    // Si l'exécution est différente de false alors ça a bien été exécuté:
     if ($exec != false) {
         echo "ok";
         // Retour a l'index.php :

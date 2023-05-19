@@ -17,7 +17,7 @@ require_once('../../actions/dbconnect.php')
     <title>Leboncote</title>
 </head>
 <body>
-    
+    <!-- Création du formulaire -->
     <div class="cardf">
     <div class="card-header">  
             <h1>Formulaire d'ajout de produits</h1>

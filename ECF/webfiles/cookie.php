@@ -1,5 +1,5 @@
 <?php
-setcookie('rgpd', "connected", time ()+2590, "/");
+setcookie('CGU', "connected", time ()+3390, "/");
 
-header("Location: ./../index.php");
+header("Location: ./../../index.php");
 ?>
