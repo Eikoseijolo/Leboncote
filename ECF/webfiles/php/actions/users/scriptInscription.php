@@ -1,6 +1,6 @@
 <?php
 //on importe la page dbConnect.php qui sert a se connecter a la base de donnée
-require_once('./../dbConnect.php');
+require_once('./../dbconnect.php');
 
 // Vérification de la connexion à la base de données
 if (!empty($database)) {
