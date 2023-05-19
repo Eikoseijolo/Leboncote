@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 //on importe la page dbconnect.php qui sert a se connecter à la base de données
+=======
+//on importe la page dbConnect.php qui sert a se connecter a la base de donnée
+>>>>>>> 941b021bcfef6dfc99b9af9fa55696e98af89f3a
 require_once('./../dbconnect.php');
 
 // Vérification de la connexion à la base de données

@@ -64,7 +64,7 @@ main h1{
 }
 
 .card-header {
-  background-color: #232f3e;
+  background-color: #ce7d0b;
   padding: 16px;
   text-align: center;
 }
@@ -86,7 +86,7 @@ main h1{
 .form-group label {
   display: block;
   font-size: 14px;
-  color: #232f3e;
+  color: #ce7d0b;
   font-weight: bold;
   margin-bottom: 1px;
 }
@@ -160,15 +160,21 @@ main .card img{
 }
 
 footer{
+  border-top: solid 3px orange;
     margin-top: 4rem;
     color: white;
-    font-family: sans-serif;
-    background-color: #b95000;
-    padding: 1.5rem 0;
+    background-color: #ce7d0b;
+    padding-top: 1.5rem;
     text-align: center;
     font-size: 1rem;
 }
-
+#barname{
+  border-top: solid 3px orange;
+  border-bottom: solid 3px orange;
+}
+.buttonCookie {
+  padding-top: 1.5rem;
+}
 button {
     margin: auto;
     margin-bottom: 0.5rem;
