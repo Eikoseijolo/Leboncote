@@ -15,13 +15,15 @@
         <h1 class="logo">Inscription</h1>
     </div>
     <div class="card-body">
+        <!-- formulaire de connexion transmise au fichier scriptInscription.php par methode POST -->
         <form action="./../../actions/users/scriptInscription.php" method="POST">
             <div class="form-group">
                 <label for="Votre Nom">Nom</label>
                 <input class="input" name="user_nom" type="text" placeholder="Votre nom" id="Votre Nom">
             </div>
+
             <div class="form-group">
-                <label for="Mot de pass">Mot de passe</label>
+                <label for="Mot de pass">Mot de pass</label>
                 <input class="input" name="user_password" type="password" placeholder="Votre Password" id="Mot de pass">
             </div>
             <button class="button">S'enregistrer</button>

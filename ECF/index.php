@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+
     <?php
     $database = new PDO(
         'mysql:host=localhost;dbname=leboncote;charset=utf8',
@@ -18,26 +20,25 @@
         ''
     );
     // FAIRE UN REQUIRE ONCE DU DBCONNECT 
-    if (!empty($database)){
-        setcookie('user_nom',"warren", time()+500);
+    if (!empty($database)) {
+        setcookie('user_id', "Le coockie", time() + 5);
 
     }
 
- 
 
-        if(!empty($database)){
-            echo "Connexion BDD réussie";
-        }
-         
-?>
-<?php
-            if(isset($_COOKIE['user_nom'])){
-                echo 'Votre ID de session est: ' .$_COOKIE['user_nom'];
-            }
-            else{
-                echo "Votre ID n'est pas correctement défini";
-            }
-        ?>
+
+    if (!empty($database)) {
+        echo "Connexion BDD réussie";
+    }
+
+    ?>
+    <?php
+    if (isset($_COOKIE['user_id'])) {
+        echo 'Votre ID de session est: ' . $_COOKIE['user_id'];
+    } else {
+        echo "Votre ID n'est pas correctement défini";
+    }
+    ?>
 
 
 
